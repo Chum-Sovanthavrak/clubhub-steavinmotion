@@ -1,12 +1,12 @@
-# ITC Club Hub · Team <team name>
+# ITC Club Hub · Team SteavInMotion
 
 An application for the student clubs of the Institute of Technology of
 Cambodia. Course project, Introduction to Software Engineering.
 
 ## Team
-| Member | GitHub | Role (Sprint 1) |
-|--------|--------|-----------------|
-<!-- each member adds their own row in their own commit -->
+|          Member          |           GitHub          | Role (Sprint 1) |
+|--------------------------|---------------------------|-----------------|
+| Phorst Chan Sereywattana | @Phorst-Chan-Sereywattana | Product Owner   |
 
 ## Repository layout
 | Path | Content |

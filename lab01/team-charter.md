@@ -35,3 +35,4 @@ The Product Owner stays the same all semester.
 - Where decisions are recorded: lab01/decisions.md
 
 ## Agreed by
+- Phorst Chan Sereywattana, 2026-10-21
