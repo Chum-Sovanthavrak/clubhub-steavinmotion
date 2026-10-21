@@ -32,4 +32,6 @@ flowchart LR
 
 - The essential difficulty our team will hit first in ITC Club Hub is **complexity**. Complexity happens because different parts of the system interact with each other in complicated ways. In ITC Club Hub, this complexity shows up when managing user roles, permissions, and club event approvals.
 - For example, when a user submits a new event, the system has to check their role, verify their club membership, and update event status at the same time. This creates many moving parts where a small bug in permissions can break the approval process.
-- Over the next four weeks, we will handle this by creating clear module boundaries and keeping our code organized into separate files (like `banner.hpp`). This will make the project easier to understand and test.
+- Over the next four weeks, we will handle this by creating clear module boundaries and keeping our code organized into separate files (like `banner.hpp`). This will make the project easier to understand and test.\
+
+- (signed) Chum Sovanthavrak: "Separating system responsibilities will help us avoid permission conflicts."
