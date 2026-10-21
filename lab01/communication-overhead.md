@@ -37,3 +37,4 @@ flowchart LR
 - (signed) Chum Sovanthavrak: "Separating system responsibilities will help us avoid permission conflicts."
 - (signed) Phorst Chan Sereywattana: "We will keep modules separate to prevent unexpected bugs between user roles and event logic."
 - (signed) Ty Vannavuth: "Well-defined module boundaries will keep our state transitions reliable."
+- (signed) Keng Kolpanha: "Using clear header interfaces will keep our codebase simple and manageable."
