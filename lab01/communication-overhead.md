@@ -35,3 +35,4 @@ flowchart LR
 - Over the next four weeks, we will handle this by creating clear module boundaries and keeping our code organized into separate files (like `banner.hpp`). This will make the project easier to understand and test.\
 
 - (signed) Chum Sovanthavrak: "Separating system responsibilities will help us avoid permission conflicts."
+- (signed) Phorst Chan Sereywattana: "We will keep modules separate to prevent unexpected bugs between user roles and event logic."
