@@ -6,7 +6,7 @@
 | (a) everyone + client | 5 | 10 | 100 | 1.7 |
 | (b) client via PO      | 4 + client link | 7 | 70 | 1.2 |
 
-Assumption: 10 minutes per path per week, because quick updates, async messages, and coordination overhead take around 10 minutes per communication channel weekly.
+Assumption: 10 minutes per path per week, because quick updates, async messages, and coordination overhead take around 10 minutes per communication channel weekly.\
 Team capacity: 4 members × 6 h = 24 h/week -> overhead = 5%
 
 ## Our paths (model b)
@@ -30,6 +30,6 @@ flowchart LR
 
 ## Reflection: Essential Difficulty in ITC Club Hub
 
-The essential difficulty our team will hit first in ITC Club Hub is **complexity**. Complexity happens because different parts of the system interact with each other in complicated ways. In ITC Club Hub, this complexity shows up when managing user roles, permissions, and club event approvals.\
-For example, when a user submits a new event, the system has to check their role, verify their club membership, and update event status at the same time. This creates many moving parts where a small bug in permissions can break the approval process.\
-Over the next four weeks, we will handle this by creating clear module boundaries and keeping our code organized into separate files (like `banner.hpp`). This will make the project easier to understand and test.\
+- The essential difficulty our team will hit first in ITC Club Hub is **complexity**. Complexity happens because different parts of the system interact with each other in complicated ways. In ITC Club Hub, this complexity shows up when managing user roles, permissions, and club event approvals.
+- For example, when a user submits a new event, the system has to check their role, verify their club membership, and update event status at the same time. This creates many moving parts where a small bug in permissions can break the approval process.
+- Over the next four weeks, we will handle this by creating clear module boundaries and keeping our code organized into separate files (like `banner.hpp`). This will make the project easier to understand and test.
