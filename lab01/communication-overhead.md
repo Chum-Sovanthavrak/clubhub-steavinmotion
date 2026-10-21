@@ -1,11 +1,11 @@
 # Communication overhead · SteavInMotion (v1.0, 2026-10-21)
 
 ## Paths
-(a) 4 members + client, all pairs:  5 x 4 / 2 = 10 paths
-(b) client only via the PO:         4 x 3 / 2 + 1 = 7 paths
-Assumption: 10 min per path per week
-    (a) 100 min = 1.67 h/week    (b) 70 min = 1.17 h/week
-Team capacity: 4 x 6 h = 24 h/week -> (b) costs about 5 %
+(a) 4 members + client, all pairs:  5 x 4 / 2 = 10 paths\
+(b) client only via the PO:         4 x 3 / 2 + 1 = 7 paths\
+Assumption: 10 min per path per week\
+    (a) 100 min = 1.67 h/week    (b) 70 min = 1.17 h/week\
+Team capacity: 4 x 6 h = 24 h/week -> (b) costs about 5 %\
 Fifth member in week 11: 5 x 4 / 2 + 1 = 11 paths (+57 %)  
 
 ## Our paths (model b)
