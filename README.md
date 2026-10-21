@@ -8,6 +8,7 @@ Cambodia. Course project, Introduction to Software Engineering.
 |--------------------------|---------------------------|-----------------|
 | Phorst Chan Sereywattana | @Phorst-Chan-Sereywattana | Product Owner   |
 | Chum Sovanthavrak        | @Chum-Sovanthavrak        | Scrum Master    |
+| Ty Vannavuth             | @TyVannavuth-pixel        | Developer       |
 
 
 ## Repository layout
