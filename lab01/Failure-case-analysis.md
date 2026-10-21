@@ -1,5 +1,5 @@
 # Failure case analysis · <Mars Climate Orbiter, lost in 1999> (v1.0, 2026-10-20)
-Authors: Ty Vannavuth <Section 1 and 2>
+Authors: Ty Vannavuth <Section 1 and 2> , Phorst Chan Sereywattana <Section 3>
 
 ## 1. Context
 Mars Climate Orbiter(MCO) was a $125 million robotic space probe launched by NASA on December 11, 1998, to study the Martian climate, atmoshere,and surface changes.It also had another job whic is to relaying radio communications for its sister mission, the Mars Polar Lander, which was due to land in December 1999.
@@ -18,15 +18,14 @@ After about nine and a half months of cruise, MCO was set to enter orbit around 
 |1999-11-10|NASA published its Phase I report, which concluded that the main reason for the loss of the MCO was measurement mismatches.|
 
 ## 3. What failed
-<one paragraph>
+The ground software that processes thruster-firing data (the "small forces" file) wrote its output in pound-force seconds, although the interface specification required Newton-seconds. The navigation software read those numbers as Newton-seconds, so it treated every firing as about 4.45 times weaker than it really was. These firings, which stop the reaction wheels from saturating, happened 10 to 14 times more often than the navigators expected because of the spacecraft's asymmetric solar array, so the small error added up over the nine-month cruise. By arrival, the real trajectory was about 170 km lower than the estimate, and the orbiter passed roughly 57 km above Mars instead of the planned 226 km, well below the 80 km considered survivable. The software on board the spacecraft was correct; the error was only in the ground software.  
 
-```mermaid
 flowchart TD
-  A["root cause"] --> B["..."]
-  B --> C["..."]
-  C --> D["..."]
-  D --> E["impact"]
-```
+A["Ground software outputs thruster impulse in lbf-s instead of N-s"] --> B["Navigation software underestimates each thruster firing by 4.45"]
+B --> C["Small trajectory errors accumulate over the 9-month cruise"]
+C --> D["Discrepancies reported informally, no corrective burn"]
+D --> E["Orbiter arrives about 170 km lower than planned"]
+E --> F["Orbiter lost during Mars orbit insertion"]
 
 ## 4. Root causes
 | # | Root cause | Type | Essential difficulty | Why |
