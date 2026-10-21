@@ -3,11 +3,11 @@
 ## Paths
 | Model | People n | Paths n(n-1)/2 | Minutes/week | Hours/week |
 |-------|----------|----------------|--------------|------------|
-| (a) everyone + client | 5 | 10 | 100 | 1.7 |
-| (b) client via PO      | 4 + client link | 7 | 70 | 1.2 |
-
-Assumption: 10 minutes per path per week, because quick updates, async messages, and coordination overhead take around 10 minutes per communication channel weekly.\
-Team capacity: 4 members × 6 h = 24 h/week -> overhead = 5%
+| (a) everyone + client | 5 | 10 | 100 | 1.7 | 
+| (b) client via PO      | 4 | 7 | 70 | 1.2 |
+- (a) 5 x 4 / 2 = 10 paths; (b) 4 x 3 / 2 + 1 = 7 paths
+- Assumption: 10 minutes per path per week, because quick updates, async messages, and coordination overhead take around 10 minutes per communication channel weekly.\
+- Team capacity: 4 members × 6 h = 24 h/week -> overhead = 5%
 
 ## Our paths (model b)
 ```mermaid
