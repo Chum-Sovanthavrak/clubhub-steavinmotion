@@ -1,12 +1,11 @@
 # Lab-02 · Classification of five applications
-Version 1.0 · 2026-__-__ · Team: __
+Version 1.0 · 2026-10-26 · Team: SteavInMotion
 
 | # | Application | Kind | Type(s) | Where the code runs, how it is delivered | Architecture | Top 3 qualities (why) | Filled by |
 |---|-------------|------|---------|------------------------------------------|--------------|-----------------------|-----------|
 | 1 | Mobile banking app: __ | | | | | | |
-| 2 | Telegram | | | | | | |
+| 2 | Telegram | Application | Cross-platform (mobile native on Android/iOS, desktop, web SPA); cloud SaaS; data-intensive | Phone apps (stores), desktop apps (installer), browser client (URL); Telegram's servers in several data centres; updates via stores or auto-update | Client-server: all clients talk to the same servers, with local cache so recent chats can be read offline | **Availability**: if it is down, millions of people (including class groups) cannot reach each other. **Performance**: if messages arrive late, a chat stops feeling live and users switch app. **Security/privacy**: a leak of private chats exposes personal conversations. | Ty Vannavuth |
 | 3 | ABS controller in a car | | | | | | |
 | 4 | Moodle at ITC | | | | | | |
-| 5 | Game: __ | | | | | | |
-
+| 5 | Game: Sky: Children of the Light | Application | Game; cross-platform (mobile native on Android/iOS, also Nintendo Switch and PC); online social multiplayer; cloud back end | Phone app from the App Store or Google Play (console and PC versions from their own stores); game servers host the shared worlds, accounts and cloud saves; content and seasonal updates arrive as patches | Client-server: the device renders the world and sends player actions, while the servers keep the shared world, friends list and progress. Cloud saves let you continue on another device | **Availability**: if servers are down during a seasonal event or daily quest reset, players cannot log in and may miss time-limited rewards. **Performance**: on low-end phones a low frame rate or lag in a crowded shared world makes flying and playing together stutter, and players quit. **Security**: a stolen account loses candles, items and purchased cosmetics, and payment fraud costs real money. | Ty Vannavuth |
 Biggest difference we found: __
