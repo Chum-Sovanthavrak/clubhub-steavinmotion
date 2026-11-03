@@ -23,7 +23,7 @@ D. Responsive web app only, no service worker (always online)
 | No install and easy report printing for administrators (1)             | Only 2 or 3 users, once a month|	1 x 1 = 1	|2 x 1 = 2|	5 x 1 = 5|	5 x 1 = 5|
 | **Total**(max 60)                           | | 	3 + 9 + 15 + 10 + 1 = 38|9 + 9 + 12 + 8 + 2 = 40|12 + 12 + 12 + 6 + 5 = 47|	15 + 15 + 3 + 4 + 5 = 42 |
 
-Deal-breaker check:Deal-breakers:(1) check-in must work without Wi-Fi; (2) no student may be registered twice or beyond capacity (this is enforced on the server, so it holds for every option); (3) no password stored by Club Hub (the ITC student directory handles identity).
+Deal-breaker check: (1) check-in must work without Wi-Fi; (2) no student may be registered twice or beyond capacity (this is enforced on the server, so it holds for every option); (3) no password stored by Club Hub (the ITC student directory handles identity).
 
 - D (responsive web, 42) scores second but fails deal-breaker 1, so it is out.
 - The winner C passes deal-breaker 1 only if we add an offline check-in queue (service worker + IndexedDB, synchronised when the network returns; see the challenge). We add this to the decision. Organisers must install the PWA to the Home Screen and open it once on good Wi-Fi before the event.
