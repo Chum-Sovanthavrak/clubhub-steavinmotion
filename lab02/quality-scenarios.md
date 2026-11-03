@@ -1,15 +1,15 @@
 # Lab-02 · Quality attribute scenarios for SteavInMotion
 Version 1.0 · 2026-__-__ · Reviewed by (Scrum Master): __
 
-## QAS-01 · Availability · written by __
-| Part             | Content |
-|------------------|---------|
-| Source           |         |
-| Stimulus         |         |
-| Environment      |         |
-| Artifact         |         |
-| Response         |         |
-| Response measure |         |
+## QAS-01 · Availability · written by Phorst Chan Sereywattana
+| Part | Content |
+|---|---|
+| Source | Club administrator |
+| Stimulus | A cloud server hosting Club Hub crashes during peak load on Friday evening |
+| Environment | Friday 18:00, registration opens, 40 active clubs publishing events |
+| Artifact | Core backend server and database cluster |
+| Response | System automatically detects failure, switches to hot-standby replica, and restores database connections |
+| Response measure | Downtime <= 30 seconds; 0 data loss for registered attendees; equivalent to <= 0.005% monthly downtime |
 
 ## QAS-02 · Performance of check-in at the door · written by Ty Vannavuth
 | Part | Content |
