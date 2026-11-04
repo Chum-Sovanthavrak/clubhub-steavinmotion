@@ -46,7 +46,7 @@ int listEvents(const std::string& path) {
         }
     }
 
-    return 0;
+    return 1;
 }
 
 void printUsage() {
