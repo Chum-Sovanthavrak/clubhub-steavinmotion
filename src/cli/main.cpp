@@ -1,29 +1,53 @@
-// src/cli/main.cpp: the only place that talks to the user
-#include <algorithm>
-#include <fstream>
-#include <iomanip>
 #include <iostream>
+#include <fstream>
 #include <string>
-
+#include <algorithm>
+#include <iomanip>
 #include "clubhub/event.hpp"
 #include "clubhub/event_csv.hpp"
 
 namespace {
 
 int listEvents(const std::string& path) {
-    std::ifstream file{path};
-    if (!file) {
-        std::cerr << "error: cannot open " << path << '\n';
-        return 2;
+    std::ifstream file(path);
+    if (!file.is_open()) {
+        std::cerr << "error: could not open file " << path << '\n';
+        return 1;
     }
-    auto [events, errors] = clubhub::loadEventsCsv(file);
-    // TODO: sort events by start time (std::ranges::sort, projection
-    //       &clubhub::Event::start)
-    // TODO: print a header line and one aligned row per event
-    //       (std::left, std::setw; formatTimePoint for the start)
-    // TODO: print "<n> event(s)", then every error to std::cerr as
-    //       <path>:<line>: skipped: <message>
-    return errors.empty() ? 0 : 1;
+
+    auto result = clubhub::loadEventsCsv(file);
+
+    // Sort events chronologically by start time
+    std::sort(result.events.begin(), result.events.end(), [](const auto& a, const auto& b) {
+        return a.start() < b.start();
+    });
+
+    // Print successfully loaded events
+    std::cout << "--- ITC Club Hub Events ---\n";
+    std::cout << std::left << std::setw(10) << "ID"
+              << std::setw(25) << "Title"
+              << std::setw(20) << "Start Time"
+              << std::setw(15) << "Location"
+              << std::setw(10) << "Capacity" << '\n';
+    std::cout << std::string(80, '-') << '\n';
+
+    for (const auto& event : result.events) {
+        std::cout << std::left << std::setw(10) << event.id()
+                  << std::setw(25) << event.title()
+                  << std::setw(20) << clubhub::formatTimePoint(event.start())
+                  << std::setw(15) << event.location()
+                  << std::setw(10) << event.capacity() << '\n';
+    }
+
+    // Print any parsing errors encountered
+    if (!result.errors.empty()) {
+        std::cerr << "\nWarnings/Errors encountered during loading:\n";
+        for (const auto& err : result.errors) {
+            std::cerr << "Line " << err.line << ": " << err.message << '\n';
+        }
+    }
+
+    return 0;
 }
 
 void printUsage() {
