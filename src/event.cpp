@@ -17,7 +17,7 @@ Event::Event(std::string id, std::string title, TimePoint start,
         throw std::invalid_argument("Event title cannot be empty");
     }
     if (capacity_ <= 0) {
-        throw std::invalid_argument("Event capacity must be greater than zero");
+        throw std::invalid_argument("Capacity must be positive");
     }
 }
 
