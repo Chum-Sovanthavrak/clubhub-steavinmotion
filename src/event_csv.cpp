@@ -29,10 +29,10 @@ EventLoadResult loadEventsCsv(std::istream& in) {
         std::stringstream ss(line);
         std::string id, title, startStr, location, capacityStr;
 
-        if (!std::getline(ss, id, ',') 
-            !std::getline(ss, title, ',') 
-            !std::getline(ss, startStr, ',') 
-            !std::getline(ss, location, ',') 
+        if (!std::getline(ss, id, ',') ||
+            !std::getline(ss, title, ',') ||
+            !std::getline(ss, startStr, ',') ||
+            !std::getline(ss, location, ',') ||
             !std::getline(ss, capacityStr, ',')) {
             result.errors.push_back({lineNo, "Invalid CSV format: missing required columns"});
             continue;

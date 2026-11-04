@@ -22,26 +22,25 @@ int listEvents(const std::string& path) {
         return a.start() < b.start();
     });
 
-    // Print successfully loaded events
-    std::cout << "--- ITC Club Hub Events ---\n";
-    std::cout << std::left << std::setw(10) << "ID"
-              << std::setw(25) << "Title"
-              << std::setw(20) << "Start Time"
-              << std::setw(15) << "Location"
-              << std::setw(10) << "Capacity" << '\n';
-    std::cout << std::string(80, '-') << '\n';
+    // Header row expected by lab specification
+    std::cout << std::left << std::setw(18) << "START"
+              << std::setw(22) << "TITLE"
+              << std::setw(13) << "LOCATION"
+              << "CAPACITY\n";
 
+    // Data rows
     for (const auto& event : result.events) {
-        std::cout << std::left << std::setw(10) << event.id()
-                  << std::setw(25) << event.title()
-                  << std::setw(20) << clubhub::formatTimePoint(event.start())
-                  << std::setw(15) << event.location()
-                  << std::setw(10) << event.capacity() << '\n';
+        std::cout << std::left << std::setw(18) << clubhub::formatTimePoint(event.start())
+                  << std::setw(22) << event.title()
+                  << std::setw(13) << event.location()
+                  << event.capacity() << '\n';
     }
 
-    // Print any parsing errors encountered
+    // Event count summary line
+    std::cout << result.events.size() << " event(s)\n";
+
+    // Print errors/warnings to stderr if any exist
     if (!result.errors.empty()) {
-        std::cerr << "\nWarnings/Errors encountered during loading:\n";
         for (const auto& err : result.errors) {
             std::cerr << "Line " << err.line << ": " << err.message << '\n';
         }

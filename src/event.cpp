@@ -29,7 +29,7 @@ TimePoint parseTimePoint(const std::string& text) {
     
     in >> y >> dash1 >> mo >> dash2 >> d >> h >> colon >> mi;
     
-    if (!in  dash1 != '-'  dash2 != '-'  colon != ':') {
+    if (!in || dash1 != '-' || dash2 != '-' || colon != ':') {
         throw std::invalid_argument("Invalid time format, expected YYYY-MM-DD HH:MM");
     }
     
@@ -42,7 +42,7 @@ TimePoint parseTimePoint(const std::string& text) {
         throw std::invalid_argument("Invalid calendar date");
     }
     
-    if (h < 0  h > 23  mi < 0  mi > 59) {
+    if (h < 0 || h > 23 || mi < 0 || mi > 59) {
         throw std::invalid_argument("Invalid hour or minute values");
     }
     
