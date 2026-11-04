@@ -16,8 +16,8 @@ Version 1.0 · 2026-11-04 · Team: SteavInMotion
 | `src/cli/main.cpp` | `list-events` command; the only file that prints | SteavInMotion |
 | `CMakeLists.txt` | Targets `clubhub_core` (library) and `clubhub` (executable) | Chum Sovanthavrak |
 | `data/events.csv` | Sample events, including the invalid row E004 | Chum Sovanthavrak |
-| `lab02/challenge/offline-checkin.md` | Challenge: offline-first check-in design | __ |
-| `include/clubhub/queued_checkin.hpp` | Challenge: `QueuedCheckIn` and `CheckInQueue` | __ |
+| `lab02/challenge/offline-checkin.md` | Challenge: offline-first check-in design |  SteavInMotion |
+| `include/clubhub/queued_checkin.hpp` | Challenge: `QueuedCheckIn` and `CheckInQueue` |  SteavInMotion |
 
 ## Inputs reused
 Get the commit hash with `git log -1 --format=%h -- <file>`.
