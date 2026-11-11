@@ -1,0 +1,23 @@
+flowchart LR
+  subgraph CLI["CLI: clubhub register"]
+    A1["clubhub register"] --> A2["Enter student ID, name, email<br/>one-line notice + link to full notice"]
+    A2 --> A5{"SMS reminders?<br/>default: no"}
+    A5 -- yes --> A6["Ask phone number<br/>giveSmsConsent()"]
+    A5 -- no --> A7["Account created"]
+    A6 --> A7
+  end
+
+  subgraph WEB["Planned web form"]
+    W1["Form with one-line notice<br/>and link above the button"] --> W3["Box: SMS reminders<br/>unticked by default<br/>phone field appears only if ticked"]
+    W3 --> W4["Create account<br/>works with the box unticked"]
+  end
+
+  subgraph WD["Withdraw consent later"]
+    X1["My profile: SMS reminders"] --> X2{"Switch off?"}
+    X2 -- yes --> X3["withdrawSmsConsent()<br/>phone number erased at once"]
+    X2 -- no --> X5["Nothing changes"]
+    X3 --> X6["Confirmation shown<br/>account stays active"]
+  end
+
+  A7 -.-> X1
+  W4 -.-> X1
