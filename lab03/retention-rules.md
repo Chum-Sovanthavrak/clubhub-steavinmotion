@@ -1,5 +1,5 @@
 # Retention rules · ITC Club Hub
-Version 1.0 · 2026-11-10 · Authors: <Ty Vannavuth>
+Version 1.0 · 2026-11-10 · Authors: Ty Vannavuth
 
 One row for every field with a `Keep`, `Keep optional`, `Mask` or `Aggregate` decision in `lab03/data-inventory.md`. "Graduation" means the date the registrar marks the student as graduated or withdrawn. `clubhub purge` is a future administrator command that runs monthly.
 
