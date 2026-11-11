@@ -1,31 +1,19 @@
-# Privacy notice · ITC Club Hub
-Version 1.0 · 2026-11-11 · Authors: Ty Vannavuth
+# Retention rules · ITC Club Hub
+Version 1.0 · 2026-11-10 · Authors: <Ty Vannavuth>
 
-## Who we are
-Club Hub is run by the clubs office of the Institute of Technology of Cambodia. The clubs office is responsible for your data.
+One row for every field with a `Keep`, `Keep optional`, `Mask` or `Aggregate` decision in `lab03/data-inventory.md`. "Graduation" means the date the registrar marks the student as graduated or withdrawn. `clubhub purge` is a future administrator command that runs monthly.
 
-## What we collect and why
-- **Student ID, name and email:** to register you for events and send you confirmations.
-- **Club memberships:** so club leaders can manage their clubs.
-- **Attendance:** to check you in at the door and to count how many students came.
-- **Phone number (only if you choose):** to send you an SMS reminder.
+| Field | Trigger | Action | Who or what runs it | How to verify |
+|-------|---------|--------|---------------------|---------------|
+| studentId | Student deletes the account, or 6 months after graduation | Delete the row in `data/students.csv`. In `data/registrations.csv` replace the ID with an anonymous token, so counts stay correct | `clubhub purge`, monthly. Account deletion runs it for that student at once | Unit test: after purge the ID is not found in either file. Monthly checklist item with date and signature of the administrator |
+| name | Same as studentId | Delete with the student's row | `clubhub purge` | Same test as studentId: no row, no name left in any CSV |
+| email | Same as studentId | Delete with the student's row | `clubhub purge` | Same test as studentId; `git grep` and a file search find no email outside `example.edu` test data |
+| phone | Student withdraws SMS consent (immediate), or 6 months after graduation | Erase the number: `withdrawSmsConsent()` resets the optional value, and the CSV cell is emptied | `withdrawSmsConsent()` at once; `clubhub purge` for the graduation case | Unit test `WithdrawingSmsConsentErasesPhone`. After a purge test, no phone column has a value for graduated students |
+| clubMemberships | Student leaves the club, deletes the account, or 6 months after graduation | Delete the membership rows in `data/memberships.csv` | Club leader or student for leaving (at once); `clubhub purge` for the other cases | Unit test: after purge no membership row refers to the student. Monthly checklist item |
+| attendance | 3 months after the event | Aggregate: keep one count per event and month, delete the identified rows (no studentId left) | `clubhub purge`, monthly | Test: totals before and after purge are equal and the aggregated file has no studentId column. Monthly checklist item with date and signature |
 
-We collect nothing else.
+## Monthly purge checklist
 
-## Who sees it
-- Organisers see your name and a hidden version of your ID, for their own events only.
-- Club leaders see the members of their own club only.
-- The clubs office sees your details to run the service. Its reports show counts, not names.
-- Sponsors and other people see nothing.
-
-## How long
-We keep your details until you delete your account, or for 6 months after you graduate. We keep who attended an event for 3 months, then only a count. If you turn off SMS reminders, we delete your phone number at once.
-
-## Your choices
-- SMS reminders are off until you turn them on.
-- You can say no and still get an account.
-- You can change your mind at any time in My profile.
-- You can ask to see, correct or delete your data.
-
-## Contact
-Write to the clubs office: clubs@example.edu
+| Month | Purge run by | Date | Signature | Rows removed or aggregated |
+|-------|--------------|------|-----------|----------------------------|
+| 2026-MM | TODO | TODO | TODO | TODO |
