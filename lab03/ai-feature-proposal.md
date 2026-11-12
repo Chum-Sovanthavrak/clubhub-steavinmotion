@@ -1,12 +1,12 @@
 # AI feature proposal: "Recommended for you"
 Version 0.1 · 2026-11-12 · Authors: Chum-Sovanthavrak, Ty-Vannavuth, kengkolpanha-design, Phorst-Chan-Sereywattana
 
-## 1 Problem and non-personalised baseline
+## 1. Problem and non-personalised baseline
 
 * **User Problem:** Students face information overload when browsing dozens of weekly campus events across different clubs, making it hard to discover relevant activities without checking every club page manually.
 * **Non-personalised Baseline:** A hybrid feed combining **"Popular this week"** (events with highest campus-wide registrations) and **"Events of my clubs"** (chronological upcoming events from clubs the student has already joined). This solves discovery without collecting behavioral tracking data or personal profiles.
 
-## 2 Data needed
+## 2. Data needed
 
 | Field | Source | In inventory? | New purpose / consent? | Minimisation |
 |-------|--------|---------------|------------------------|--------------|
@@ -17,7 +17,7 @@ Version 0.1 · 2026-11-12 · Authors: Chum-Sovanthavrak, Ty-Vannavuth, kengkolpa
 
 * **Task 1 Inventory Changes:** Adding recommendations requires updating `lab03/data-inventory.md` to add a new processing purpose ("personalised event recommendations") and adding an opt-in consent flag (`recommendationsConsent`) to the `Student` model.
 
-## 3 Bias risks
+## 3. Bias risks
 
 | Risk | Who is harmed | Mitigation | Fairness check (metric, threshold) |
 |------|---------------|------------|------------------------------------|
@@ -26,7 +26,7 @@ Version 0.1 · 2026-11-12 · Authors: Chum-Sovanthavrak, Ty-Vannavuth, kengkolpa
 | **Attendance as a proxy for time/money** | Commuting or working students who attend fewer in-person events | Weight explicit club memberships and voluntary interest tags higher than raw historical counts. | Recommendation diversity score parity (<= 10% variance) between high- and low-frequency attendees. |
 | **Major / Faculty silo effect** | Students limited to events strictly tied to their academic department | Include cross-disciplinary and general interest cultural/sports tags in scoring weights. | Inter-faculty recommendation ratio: at least 30% of suggested events originate outside the student's home faculty. |
 
-## 4 Transparency
+## 4. Transparency
 
 "Why am I seeing this?" example:
 > **Recommended Event:** Intro to Robotics Workshop  
@@ -34,7 +34,7 @@ Version 0.1 · 2026-11-12 · Authors: Chum-Sovanthavrak, Ty-Vannavuth, kengkolpa
 
 * **Published Ranking Inputs:** The clubs office will publish a summary explaining that the 5 slots use three rules: past attendance in the last 12 months (40% weight), active club memberships (40%), and exploration slots for smaller/unvisited clubs (20%). No black-box machine learning models or third-party AI APIs are used.
 
-## 5 Opt-out design
+## 5. Opt-out design
 
 * **Switch Location & Default:** **Opt-in, off by default** to satisfy privacy-by-design. Located at `My profile > Privacy & Personalisation > Recommendations switch`.
 * **Derived Data Handling:** When switched off, the consent flag is revoked, all derived preference profiles are permanently deleted within **24 hours**, and the feed reverts to the non-personalised baseline.
@@ -48,7 +48,7 @@ flowchart TD
   B -- No --> F["Generate 5 explainable event recommendations"]
 ~~~
 
-## 6 Recommendation
+## 6. Recommendation
 Decision: GO WITH CONDITIONS, not before Sprint 2, and only after the baseline
 has been live for one month.
 <br>
