@@ -26,4 +26,13 @@ Chum Sovanthavrak/Team SteavInMotion
 **Preventive change:** Implement strict club-scoped data isolation queries and database row-level security so club leaders can only query attendance for their own club's events. GitHub Issue #6.
 
 ## Scenario B: "Don't mention it in the demo"
-(same table)
+
+| Step | Analysis |
+|------|----------|
+| 1 Facts | TODO (and what we still need to find out) |
+| 2 Stakeholders and harms | TODO |
+| 3 Codes, law, policy | SE Code principle TODO; ACM TODO; GDPR TODO |
+| 4 Options | (a) TODO (b) TODO (c) TODO |
+| 5 Tests | harm / rights / fairness / publicity for each option |
+| 6 Decision and action | TODO |
+| 7 Reflection | TODO |
