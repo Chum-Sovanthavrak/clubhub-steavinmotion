@@ -26,10 +26,16 @@ Version 1.0 · 2026-11-11 · Authors: Phorst Chan Sereywattana, Ty Vannavuth
 ## Lifecycle of the phone field
 
 flowchart LR
-  C["Collect<br/>only after SMS opt-in"] --> S["Store<br/>phone column, students.csv"]
-  S --> U["Use<br/>reminder sender only"]
-  U --> H["Share<br/>SMS gateway, nobody else"]
-  H --> D["Delete<br/>on withdrawal or<br/>6 months after graduation"]
+    C["Collect<br/>Only after SMS opt-in"]
+    S["Store<br/>Phone column in students.csv"]
+    U["Use<br/>Reminder sender only"]
+    H["Share<br/>SMS gateway only; nobody else"]
+    D["Delete<br/>On withdrawal or 6 months<br/>after graduation"]
+
+    C --> S
+    S --> U
+    U --> H
+    H --> D
 
 ## Client feedback
 
