@@ -21,7 +21,7 @@ Thank you for reaching out with your recruitment idea. While we understand you w
 Instead, we invite you to promote your open events through the public campus event list or coordinate joint showcases where students can opt-in to hear from multiple clubs. We'd be happy to help you set up public announcements!
 
 Best regards,  
-Team SteavInMotion
+Chum Sovanthavrak/Team SteavInMotion
 
 **Preventive change:** Implement strict club-scoped data isolation queries and database row-level security so club leaders can only query attendance for their own club's events. GitHub Issue #6.
 
