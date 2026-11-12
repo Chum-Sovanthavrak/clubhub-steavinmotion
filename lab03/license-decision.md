@@ -1,5 +1,5 @@
-# Licence decision · ITC Club Hub
-Version 1.0 · 2026-11-12 · Lead: Chum Sovanthavrak <Scrum Master Name>
+# License decision · ITC Club Hub
+Version 1.0 · 2026-11-12 · Lead: Chum Sovanthavrak <Scrum Master>
 
 | Criterion | MIT | Apache-2.0 | GPL-3.0 |
 |---|---|---|---|
@@ -18,5 +18,5 @@ Version 1.0 · 2026-11-12 · Lead: Chum Sovanthavrak <Scrum Master Name>
 |---|---|---|
 | Chum Sovanthavrak | yes | 2026-11-12 |
 |   Ty vannavuth    | yes | 2026-11-12 |
-| <Member 3 Name> | yes | 2026-11-12 |
+| Phorst Chan Sereywattana | yes | 2026-11-12 |
 | <Member 4 Name> | yes | 2026-11-12 |
