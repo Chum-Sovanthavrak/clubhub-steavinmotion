@@ -3,6 +3,7 @@
 build/
 out/
 cmake-build-*/
+build-mingw/
 CMakeCache.txt
 CMakeFiles/
 cmake_install.cmake
