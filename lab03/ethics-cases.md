@@ -29,10 +29,22 @@ Chum Sovanthavrak/Team SteavInMotion
 
 | Step | Analysis |
 |------|----------|
-| 1 Facts | TODO (and what we still need to find out) |
-| 2 Stakeholders and harms | TODO |
-| 3 Codes, law, policy | SE Code principle TODO; ACM TODO; GDPR TODO |
-| 4 Options | (a) TODO (b) TODO (c) TODO |
-| 5 Tests | harm / rights / fairness / publicity for each option |
-| 6 Decision and action | TODO |
-| 7 Reflection | TODO |
+| 1 Facts | Facts: Two days before Sprint 1 review, a bug allows 24-hour window cancellations to be accepted, and monthly reports incorrectly count cancellations as attendance. The Scrum Master tells the developer to stay silent and fix it in Sprint 2.<br>Needs clarification: Can the bug be fixed safely before Thursday? Will the client actually check this report during the review? |
+| 2 Stakeholders and harms | Stakeholders: The client/product owner, end-user students, development team, Scrum Master.<br>Harms: Loss of client trust, compromised software integrity, spreading misinformation in reports, and establishing a dishonest team culture. |
+| 3 Codes, law, policy | • SE Code: Principle 3.04 (Ensure that quality is paramount...) & 6.12 (Be accurate and honest in all professional reports).<br>• ACM Code: 1.3 (Be honest and trustworthy) and 2.5 (Give comprehensive and thorough evaluations).<br>• Professional Integrity: Transparency in agile delivery over deceptive demos. |
+| 4 Options | (a) Stay silent as instructed by the Scrum Master.<br>(b) Postpone the entire review until Sprint 2.<br>(c) Demo as planned and explicitly state the defect and its planned fix date under a "known issues" section.<br>(d) Fix the rule in the next two days and drop a lower-priority item from the demo if time is tight. |
+| 5 Tests | • Harm test: (a) Risks severe client mistrust upon discovery; (c) and (d) maintain transparency and manage expectations.<br>• Rights test: Client has a right to truthful software evaluation and accurate metrics.<br>• Fairness test: Hiding known defects shifts the risk and surprise onto the client.<br>• Publicity test: Would you be proud to explain to management why you hid known calculation errors during a client review? No. |
+| 6 Decision and action | Decision: Option (c), combined with Option (d) if the regression test is green by Thursday. The developer raises the issue respectfully with the Scrum Master (SE Code 6.12), ensuring transparency is brought to the Product Owner before the review agenda is finalized. |
+| 7 Reflection | Pressure to deliver a flawless demo can compromise ethical transparency. True agile engineering embraces open collaboration and honest reporting of defects rather than hiding behind false perfection. |
+
+Message sent: 
+Hi Chum Sovanthavrak,
+
+I've reviewed the cancellation and attendance counting bug we discussed. While I understand we want a smooth Sprint 1 demo, staying silent violates our professional commitment to honesty and risks damaging client trust if they inspect the reports. 
+
+I propose we add this item to the "Known Issues" section for Thursday's review and present our planned fix for Sprint 2. If time permits, I'll attempt to patch the regression test today. Transparency now will build stronger client confidence in the long run.
+
+Thanks,  
+Ty Vannavuth / Team SteavInMotion
+
+Preventive change: Establish a formal "Known Issues & Defect Disclosure" section template for all sprint reviews and add an automated regression test covering the 24-hour cancellation rule. GitHub Issue #7.
