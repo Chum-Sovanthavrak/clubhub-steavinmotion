@@ -17,6 +17,6 @@ Version 1.0 · 2026-11-12 · Lead: Chum Sovanthavrak <Scrum Master Name>
 | Member | Agrees | Date |
 |---|---|---|
 | Chum Sovanthavrak | yes | 2026-11-12 |
-| <Member 2 Name> | yes | 2026-11-12 |
+|   Ty vannavuth    | yes | 2026-11-12 |
 | <Member 3 Name> | yes | 2026-11-12 |
 | <Member 4 Name> | yes | 2026-11-12 |
