@@ -1,6 +1,6 @@
 // tests/ConsoleOutputTest.cpp
 // SPDX-License-Identifier: MIT
-// Copyright (c) 2026 <Steavinmotions>, ITC Club Hub contributors
+// Copyright (c) 2026 SteavInMotion, ITC Club Hub contributors
 #include "clubhub/ConsoleOutput.h"
 
 #include <gtest/gtest.h>

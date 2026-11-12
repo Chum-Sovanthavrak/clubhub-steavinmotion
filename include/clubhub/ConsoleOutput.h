@@ -1,6 +1,6 @@
 // include/clubhub/ConsoleOutput.h
 // SPDX-License-Identifier: MIT
-// Copyright (c) 2026 <Team name>, ITC Club Hub contributors
+// Copyright (c) 2026 SteavInMotion, ITC Club Hub contributors
 #pragma once
 
 #include <string>

@@ -1,6 +1,6 @@
 // include/clubhub/Student.h
 // SPDX-License-Identifier: MIT
-// Copyright (c) 2026 <team name>, ITC Club Hub contributors
+// Copyright (c) 2026 SteavInMotion, ITC Club Hub contributors
 #pragma once
 
 #include <optional>
