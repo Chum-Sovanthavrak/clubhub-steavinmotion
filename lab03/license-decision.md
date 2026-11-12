@@ -19,4 +19,4 @@ Version 1.0 · 2026-11-12 · Lead: Chum Sovanthavrak <Scrum Master>
 | Chum Sovanthavrak | yes | 2026-11-12 |
 |   Ty vannavuth    | yes | 2026-11-12 |
 | Phorst Chan Sereywattana | yes | 2026-11-12 |
-| <Member 4 Name> | yes | 2026-11-12 |
+| Keng Kolpanha | yes | 2026-11-12 |
