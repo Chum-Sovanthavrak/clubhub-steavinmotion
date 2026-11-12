@@ -1,5 +1,5 @@
 # CLI output rules · ITC Club Hub
-Version 1.0 · 2026-11-12 · Authors: <Phorst Chan Sereywattana>
+Version 1.0 · 2026-11-12 · Authors: Phorst Chan Sereywattana
 
 | # | Rule | Bad | Good |
 |---|------|-----|------|
