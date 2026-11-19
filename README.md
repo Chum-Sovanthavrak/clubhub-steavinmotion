@@ -8,7 +8,7 @@ Cambodia. Course project, Introduction to Software Engineering.
 |--------------------------|---------------------------|-----------------|
 | Phorst Chan Sereywattana | @Phorst-Chan-Sereywattana | Product Owner   |
 | Chum Sovanthavrak        | @Chum-Sovanthavrak        | Scrum Master    |
-| Ty Vannavuth             | @Ty-Vannavuth             | Developer       |
+| Ty Vannavuth             | @TyVannavuth-pixel        | Developer       |
 | Keng Kolpanha            | @kengkolpanha-design      | Developer       |
 
 
@@ -23,9 +23,3 @@ Cambodia. Course project, Introduction to Software Engineering.
 ## Build
     cmake -S . -B build
     cmake --build build
-
-## Licence
-
-This project is licensed under the **MIT License** — see the [LICENSE](LICENSE) file for details.
-
-Third-party test dependencies and their respective licences are listed in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
