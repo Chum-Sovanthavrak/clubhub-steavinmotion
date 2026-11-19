@@ -1,0 +1,13 @@
+flowchart TD
+  A[Requirements · weeks 5-6 · PO and team] --> B[UML models · week 7 · Developers]
+  B --> C[Checkpoint 1 and midterm · week 8 · PO and TA]
+  C --> BL[(Product backlog · PO)]
+  BL --> P[Sprint planning · whole team]
+  P --> D[Develop and test · Developers]
+  D --> R[Sprint review · client and PO]
+  R --> RE[Retrospective · Scrum Master]
+  RE --> Q{Another sprint?}
+  Q -- yes --> P
+  Q -- no --> H[Hardening · week 13 · whole team]
+  H --> S[Submission and demo · week 14 · PO]
+  R -. new or changed stories .-> BL
