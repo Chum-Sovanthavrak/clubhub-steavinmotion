@@ -8,4 +8,4 @@ Scale: 1 = fits Club Hub badly on this criterion, 5 = fits very well.
 | Client availability    | 3 | 3 | 4 | TA is free only 30 min a week: enough for a review every two weeks, not for daily questions. |
 | Team experience        | 4 | 3 | 3 | We know the plan-then-build approach better than sprints, which are new to most of us. |
 | Deadline (week 14)     | 2 | 4 | 4 | Waterfall tests last and may have nothing demoable in week 14, while sprints give a working demo each review. |
-| Risk                   | 3 | 4 | 4 | |
+| Risk                   | 3 | 4 | 4 | Reviews and tests in each increment find mistakes in the capacity, duplicate and 24 h rules earlier. |
