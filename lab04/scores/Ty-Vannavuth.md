@@ -1,4 +1,4 @@
-# Individual scores · Ty Vannavuth · Team <name>
+# Individual scores · Ty Vannavuth · Team SteavInMotion
 
 Scale: 1 = fits Club Hub badly on this criterion, 5 = fits very well.
 

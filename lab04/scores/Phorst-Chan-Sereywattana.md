@@ -1,4 +1,4 @@
-# Individual Process Scores · Chum Sovanthavrak · Team SteavInMotion
+# Individual Process Scores · Phorst Chan Sereywattana · Team SteavInMotion
 
 Scale: 1 = fits Club Hub badly on this criterion, 5 = fits very well.
 
