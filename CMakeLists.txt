@@ -46,3 +46,8 @@ add_executable(csv_smoke_test tests/csv_smoke_test.cpp)
 target_link_libraries(csv_smoke_test PRIVATE rapidcsv GTest::gtest_main)
 gtest_discover_tests(csv_smoke_test
   WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
+add_executable(cancellation_rule_test tests/cancellation_rule_test.cpp)
+target_include_directories(cancellation_rule_test PRIVATE include)
+target_link_libraries(cancellation_rule_test PRIVATE GTest::gtest_main)
+gtest_discover_tests(cancellation_rule_test
+  WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR})
